@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision) {
-		if (collision.gameObject.CompareTag ("Special") && Time.time > collisionTime + 0.25) {
+		if (collision.gameObject.CompareTag ("Special") && Time.time > collisionTime + 1) {
 			collisionTime = Time.time;
 			collision.gameObject.GetComponent<AudioSource> ().Play ();
 			collision.gameObject.GetComponent<ParticleSystem> ().Play ();
